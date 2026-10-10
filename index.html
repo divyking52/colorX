@@ -1,0 +1,2688 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ColourX Coating System — Melbourne House Painters</title>
+  <meta name="description" content="Interior and exterior house painting, cabinet respraying and specialty finishes across Melbourne." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f3f3f3;
+  --ink: #0a0a0a;
+  --ink-muted: #5c5c5c;
+  --line: #e6e6e6;
+  --orange: #ff9436;
+  --orange-deep: #f08520;
+  --dark: #0b0b0b;
+  --dark-2: #161616;
+  --nav-h: 72px;
+  --pad: clamp(1.25rem, 4vw, 3.5rem);
+  --max: 1280px;
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Sora', sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--bg);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: min(100% - var(--pad) * 2, var(--max));
+  margin-inline: auto;
+}
+
+.section {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.section-label::before,
+.section-label::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--orange);
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 48px;
+  padding: 0.85rem 1.35rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-orange {
+  background: var(--orange);
+  color: var(--ink);
+}
+
+.btn-orange:hover {
+  background: var(--orange-deep);
+}
+
+.btn-dark {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #222;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-ghost:hover {
+  border-color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.btn:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* Navbar */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+}
+
+.nav-links a {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid var(--line);
+}
+
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--ink);
+  position: relative;
+}
+
+.nav-toggle span::before,
+.nav-toggle span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle span::before {
+  top: -6px;
+}
+
+.nav-toggle span::after {
+  top: 6px;
+}
+
+/* Hero */
+.hero {
+  background: #000;
+  color: #fffbf5;
+}
+
+.hero-copy {
+  width: min(100% - 100px, 1400px);
+  margin-inline: auto;
+  padding: 110px 0 80px;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 50px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0.35rem 0.85rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 251, 245, 0.92);
+  white-space: nowrap;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(3rem, 7.6vw, 90px);
+  line-height: 1;
+  letter-spacing: -0.049em;
+  text-transform: uppercase;
+  max-width: 800px;
+  color: #fffbf5;
+}
+
+.hero-bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.5rem;
+  margin-top: 80px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 47px;
+  padding: 0.65rem 1.15rem;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+  white-space: nowrap;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-btn-orange {
+  background: var(--orange);
+  color: #0a0a0a;
+}
+
+.hero-btn-orange:hover {
+  background: var(--orange-deep);
+}
+
+.hero-btn-phone {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fffbf5;
+}
+
+.hero-btn-phone:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.hero-blurb {
+  max-width: 400px;
+  margin-left: auto;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: #fffbf5;
+  text-align: right;
+}
+
+.hero-media {
+  position: relative;
+  width: min(100% - 100px, 1400px);
+  margin: 0 auto 50px;
+  padding: 10px;
+  background: #000;
+  overflow: hidden;
+}
+
+.hero-viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1061 / 520;
+}
+
+.hero-parallax {
+  position: absolute;
+  inset: -12% 0;
+  width: 100%;
+  height: 124%;
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.hero-parallax img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  min-height: 220px;
+  background: var(--bg-soft);
+  overflow: hidden;
+  border: 1px solid transparent;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease,
+    outline-color 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--orange);
+  outline-color: var(--orange);
+}
+
+.service-copy {
+  padding: 1.35rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.service-copy h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.service-copy p {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--ink-muted);
+}
+
+.service-media {
+  overflow: hidden;
+}
+
+.service-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-card:hover .service-media img {
+  transform: scale(1.06);
+}
+
+.section-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+/* Portfolio — 3D cylinder gallery */
+.portfolio {
+  background: #f5f5f5;
+  padding: 100px 0 180px;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.portfolio-head {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding-inline: var(--pad);
+}
+
+.portfolio-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.6rem, 5.2vw, 70px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  color: #0a0a0a;
+}
+
+.portfolio-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 47px;
+  padding: 2px 10px 2px 26px;
+  background: #000;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.portfolio-btn:hover {
+  transform: translateY(-2px);
+  background: #222;
+}
+
+/* Rooferio-style concave cylinder gallery */
+.portfolio-scene {
+  position: relative;
+  height: 430px;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.portfolio-scene:active {
+  cursor: grabbing;
+}
+
+.portfolio-perspective {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  /* ~600px matches Rooferio perspective strength */
+  perspective: 600px;
+  perspective-origin: 50% 50%;
+  overflow: visible;
+}
+
+.portfolio-cylinder {
+  position: relative;
+  width: 280px;
+  height: 330px;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.portfolio-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.portfolio-drag {
+  position: absolute;
+  right: clamp(0.5rem, 8vw, 6rem);
+  bottom: 18%;
+  z-index: 2;
+  padding: 0.45rem 0.7rem;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Why us */
+.why {
+  background: var(--bg-soft);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.why-card {
+  background: #fff;
+  padding: 2rem 1.75rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.why-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-3px);
+}
+
+.why-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  background: var(--bg-soft);
+  color: var(--ink);
+}
+
+.why-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.why-card p {
+  color: var(--ink-muted);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+/* Stats — Rooferio split panels + scroll-open + video + about in flow */
+.stats-scroll {
+  position: relative;
+  background: #f5f5f5;
+}
+
+.stats-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 100vh;
+  min-height: 640px;
+  overflow: hidden;
+  color: #fffbf5;
+  background: transparent;
+}
+
+.stats-panel {
+  position: relative;
+  flex: 1 0 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.stats-panel-media {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  /* Panel is 50% wide — 200% makes one full-bleed image across both halves */
+  width: 200%;
+  filter: brightness(0.4) contrast(1.17) grayscale(0.62);
+  pointer-events: none;
+}
+
+.stats-panel[data-side='left'] .stats-panel-media {
+  left: 0;
+}
+
+.stats-panel[data-side='right'] .stats-panel-media {
+  left: -100%;
+}
+
+.stats-panel-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.stats-panel-stack {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(4.5rem, 12.6vh, 7.15rem) clamp(1.25rem, 7.6vw, 6.9rem)
+    clamp(2.75rem, 5.5vh, 3.2rem);
+}
+
+.stats-panel[data-side='left'] .stats-panel-stack {
+  align-items: flex-end;
+}
+
+.stats-panel[data-side='right'] .stats-panel-stack {
+  align-items: flex-start;
+}
+
+.stats-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: min(294px, 100%);
+}
+
+.stats-card-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.stats-card-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.stats-number-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 90px;
+}
+
+.stats-card-right .stats-number-row {
+  justify-content: flex-end;
+}
+
+.stats-card-left .stats-number-row {
+  justify-content: flex-start;
+}
+
+.stats-number {
+  font-family: var(--font-display);
+  font-size: clamp(3.4rem, 6.25vw, 90px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #fffbf5;
+}
+
+.stats-suffix {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.85vw, 41px);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--orange);
+}
+
+.stats-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.95vw, 28px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+  color: #fffbf5;
+}
+
+.stats-card p {
+  margin: 0;
+  font-size: clamp(0.9rem, 1.1vw, 16px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fffbf5;
+}
+
+.stats-seam {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 4;
+  width: 1px;
+  background: rgba(255, 251, 245, 0.92);
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.stats-video {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 50px 50px;
+  background: #f5f5f5;
+}
+
+.stats-video-frame {
+  position: relative;
+  width: min(1000px, 100%);
+  aspect-ratio: 1000 / 562;
+  overflow: hidden;
+  background: #111;
+}
+
+.stats-video-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.2) contrast(1.05);
+}
+
+.stats-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  margin: -40px 0 0 -40px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  padding: 0;
+  background: var(--orange);
+  color: #0a0a0a;
+  cursor: pointer;
+}
+
+.stats-play svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* About — sits directly under stats video (Rooferio spacing) */
+.about-block {
+  position: relative;
+  z-index: 1;
+  /* Rooferio: ~86px from video bottom to “About us” label */
+  padding: 86px 0 100px;
+  background: #f5f5f5;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-body {
+  margin-top: 1.25rem;
+  color: var(--ink-muted);
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+.about-points {
+  margin-top: 1.75rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.about-points li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.about-points li::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  margin-top: 0.35rem;
+  background: var(--orange);
+}
+
+.about-cta {
+  margin-top: 2rem;
+}
+
+.about-media {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 0.75rem;
+}
+
+.about-media .tall {
+  grid-row: span 2;
+  min-height: 420px;
+}
+
+.about-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 200px;
+}
+
+/* Process */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.process-card {
+  background: var(--bg-soft);
+  padding: 1.75rem 1.35rem;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.process-card:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+.process-step {
+  font-family: var(--font-display);
+  color: var(--orange);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.process-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.process-card p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.process-card:hover p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Reviews — Rooferio sizing: 2×658×436 desktop, 1×full×500 mobile */
+.reviews {
+  background: #f5f5f5;
+  padding: 100px 50px 140px;
+}
+
+.reviews-inner {
+  width: 100%;
+  max-width: 1325px;
+  margin-inline: auto;
+}
+
+.reviews .section-head {
+  margin-bottom: 2.5rem;
+}
+
+.review-ratings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.rating-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 87px;
+  padding: 10px 30px 10px 10px;
+  background: #fffcfc;
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.rating-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-2px);
+}
+
+.rating-card strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.rating-card span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  max-width: 16ch;
+  line-height: 1.25;
+}
+
+.review-carousel {
+  position: relative;
+}
+
+.review-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.review-track {
+  display: flex;
+  gap: 10px;
+  will-change: transform;
+}
+
+.review-card {
+  flex: 0 0 calc((100% - 10px) / 2);
+  width: calc((100% - 10px) / 2);
+  height: 436px;
+  padding: 40px;
+  background: #fffcfc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.review-card-media {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+
+.review-card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.review-card blockquote {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.7vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+  color: #141414;
+}
+
+.review-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-shrink: 0;
+  padding-top: 20px;
+}
+
+.review-card-person {
+  min-width: 0;
+}
+
+.review-card-foot strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.review-card-foot span {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink-muted);
+}
+
+.review-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.review-avatar,
+.review-eye {
+  width: 67px;
+  height: 67px;
+  display: grid;
+  place-items: center;
+  background: #f5f5f5;
+  flex-shrink: 0;
+}
+
+.review-avatar {
+  object-fit: cover;
+  display: block;
+}
+
+.review-eye {
+  border: 0;
+  padding: 0;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.review-eye:hover,
+.review-eye.is-active {
+  background: var(--ink);
+  color: #fff;
+}
+
+.review-eye svg {
+  width: 22px;
+  height: 22px;
+}
+
+.review-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.review-nav button {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--ink);
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.review-nav button:hover:not(:disabled) {
+  background: var(--ink);
+  color: #fff;
+}
+
+.review-nav button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Finishes */
+.finishes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  perspective: 1200px;
+}
+
+.finish-card {
+  background: var(--bg-soft);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: box-shadow 0.3s ease;
+}
+
+.finish-card:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.finish-media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.finish-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.finish-body {
+  padding: 1.35rem 1.25rem 1.5rem;
+}
+
+.finish-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  text-transform: uppercase;
+}
+
+.finish-body > p {
+  margin-top: 0.55rem;
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.finish-meta {
+  margin-top: 1.15rem;
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+}
+
+.finish-meta div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #ddd;
+  padding-top: 0.45rem;
+}
+
+.finish-meta span:first-child {
+  color: var(--ink-muted);
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+}
+
+.faq-q .icon {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--ink);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.faq-item.open .faq-q .icon {
+  background: var(--orange);
+  border-color: var(--orange);
+  transform: rotate(45deg);
+}
+
+.faq-a {
+  overflow: hidden;
+}
+
+.faq-a p {
+  padding: 0 0 1.25rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  max-width: 65ch;
+}
+
+/* Contact */
+.contact {
+  background: var(--dark);
+  color: #fff;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact .section-title {
+  color: #fff;
+}
+
+.contact-lead {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+  max-width: 36ch;
+}
+
+.contact-meta {
+  margin-top: 2rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.contact-meta a,
+.contact-meta p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  background: #141414;
+  padding: 1.75rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  background: #0d0d0d;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+  padding: 0.85rem 0.9rem;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--orange);
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  grid-column: 1 / -1;
+  margin-top: 0.35rem;
+}
+
+.form-note {
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0;
+}
+
+.footer-contact {
+  width: min(100% - var(--pad) * 2, 1400px);
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.footer-contact-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  align-items: baseline;
+}
+
+.footer-contact-label {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.footer-contact-row a,
+.footer-contact-row span:last-child {
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.footer-brand-block {
+  width: min(100% - var(--pad) * 2, 1400px);
+  margin: 0 auto;
+  padding: 3rem 0 2rem;
+}
+
+.footer-art {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 8;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  background: #111;
+}
+
+.footer-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.2) brightness(0.72);
+}
+
+.footer-art-icon {
+  position: absolute;
+  right: clamp(1rem, 4vw, 3rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  width: clamp(72px, 12vw, 120px);
+  height: auto;
+  color: var(--orange);
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+}
+
+.footer-brand-row {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 2rem;
+  align-items: end;
+}
+
+.footer-wordmark {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 14vw, 11rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  cursor: default;
+  width: max-content;
+  max-width: 100%;
+}
+
+.footer-wordmark span {
+  display: inline-block;
+  transition:
+    color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--i, 0) * 28ms);
+}
+
+.footer-wordmark:hover span {
+  color: var(--orange);
+  transform: translateY(-0.08em);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-wordmark span {
+    transition: color 0.2s ease;
+    transition-delay: 0ms;
+  }
+
+  .footer-wordmark:hover span {
+    transform: none;
+  }
+}
+
+.footer-brand-row p {
+  margin: 0 0 0.6rem;
+  line-height: 1.55;
+  font-size: 0.95rem;
+  max-width: 36ch;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-links {
+  width: min(100% - var(--pad) * 2, 1400px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer h4 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.footer a:hover {
+  color: var(--orange);
+}
+
+.footer-bottom {
+  width: min(100% - var(--pad) * 2, 1400px);
+  margin: 2.5rem auto 0;
+  padding: 1.25rem 0 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+/* Reveal helpers */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+/* Mobile nav drawer */
+.mobile-drawer {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: grid;
+  }
+
+  .mobile-drawer {
+    display: block;
+    position: fixed;
+    inset: var(--nav-h) 0 0 0;
+    background: #fff;
+    padding: 1.5rem var(--pad);
+    transform: translateY(-110%);
+    transition: transform 0.35s ease;
+    z-index: 40;
+  }
+
+  .mobile-drawer.open {
+    transform: translateY(0);
+  }
+
+  .mobile-drawer a {
+    display: block;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .services-grid,
+  .process-grid,
+  .finishes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .portfolio {
+    padding: 72px 0 120px;
+    overflow-x: clip;
+  }
+
+  .portfolio-head {
+    margin-bottom: 36px;
+  }
+
+  .portfolio-title {
+    margin-top: 4px;
+  }
+
+  .portfolio-actions {
+    margin-top: 28px;
+    gap: 10px;
+  }
+
+  .portfolio-scene {
+    height: 340px;
+    touch-action: none;
+  }
+
+  .portfolio-perspective {
+    perspective: 520px;
+    perspective-origin: 50% 50%;
+  }
+
+  .portfolio-cylinder {
+    width: 160px;
+    height: 190px;
+  }
+
+  .portfolio-drag {
+    right: 50%;
+    bottom: 8%;
+    transform: translateX(50%);
+    font-size: 0.65rem;
+  }
+
+  .services-grid,
+  .why-grid,
+  .process-grid,
+  .finishes-grid,
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .service-media {
+    aspect-ratio: 16 / 10;
+  }
+
+  .hero-copy {
+    width: min(100% - 32px, 1400px);
+    padding: 88px 0 40px;
+  }
+
+  .hero-badges {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 28px;
+  }
+
+  .hero-badge {
+    white-space: normal;
+    font-size: 11px;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.35rem, 11vw, 3.25rem);
+    max-width: none;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    margin-top: 36px;
+    gap: 1.25rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+
+  .hero-blurb {
+    text-align: left;
+    margin-left: 0;
+    max-width: none;
+    font-size: 15px;
+  }
+
+  .hero-media {
+    width: min(100% - 32px, 1400px);
+    margin-bottom: 28px;
+    padding: 6px;
+  }
+
+  .hero-viewport {
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero-parallax {
+    inset: -6% 0;
+    height: 112%;
+  }
+
+  .about-block {
+    padding: 40px 0 72px;
+  }
+
+  .reviews {
+    padding: 50px 20px 80px;
+  }
+
+  .reviews-inner {
+    max-width: none;
+  }
+
+  .reviews .section-head {
+    text-align: left;
+    margin-bottom: 1.75rem;
+  }
+
+  .review-ratings {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+
+  .rating-card {
+    width: 100%;
+  }
+
+  .review-card {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 500px;
+    padding: 40px;
+  }
+
+  .review-card blockquote {
+    font-size: 1.15rem;
+  }
+
+  .review-card-foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .review-avatar,
+  .review-eye {
+    width: 67px;
+    height: 67px;
+  }
+
+  .review-nav button {
+    width: 48px;
+    height: 48px;
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+  }
+
+  .stats-sticky {
+    position: relative;
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+  }
+
+  .stats-panel {
+    width: 100%;
+    min-height: 420px;
+    transform: none !important;
+  }
+
+  .stats-panel-media {
+    width: 100%;
+    left: 0 !important;
+  }
+
+  .stats-panel[data-side='right'] .stats-panel-media {
+    left: 0 !important;
+  }
+
+  .stats-panel-stack {
+    padding: 2.5rem 1.25rem;
+    gap: 2.5rem;
+    justify-content: center;
+  }
+
+  .stats-panel[data-side='left'] .stats-panel-stack,
+  .stats-panel[data-side='right'] .stats-panel-stack {
+    align-items: center;
+  }
+
+  .stats-card-left,
+  .stats-card-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .stats-card-left .stats-number-row,
+  .stats-card-right .stats-number-row {
+    justify-content: center;
+  }
+
+  .stats-number {
+    font-size: clamp(2.8rem, 14vw, 3.6rem);
+  }
+
+  .stats-seam {
+    display: none;
+  }
+
+  .stats-video {
+    padding: 2rem 1rem 2.5rem;
+  }
+
+  .stats-play {
+    width: 56px;
+    height: 56px;
+    margin: -28px 0 0 -28px;
+  }
+
+  .stats-play svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-contact-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .footer-brand-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer-art {
+    aspect-ratio: 16 / 9;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+  .about-media {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-media .tall {
+    grid-row: auto;
+    min-height: 220px;
+  }
+
+  .nav .btn {
+    display: none;
+  }
+}
+
+
+/* Standalone extras */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+.reveal.is-in { opacity: 1; transform: none; }
+.faq-a { display: none; overflow: hidden; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-q .icon { transform: rotate(45deg); }
+.stats-number { font-variant-numeric: tabular-nums; }
+.finish-card { transform-style: preserve-3d; will-change: transform; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="nav-logo" aria-label="ColourX Coating System home">
+        <img src="assets/images/logo.png" alt="" />
+        <span>ColourX</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#finishes">Finishes</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-dark" href="#contact">Free Quote <span class="arrow">→</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#finishes">Finishes</a>
+    <a href="#contact">Contact</a>
+    <a class="btn btn-dark" href="#contact" style="margin-top:1.25rem">Free Quote <span class="arrow">→</span></a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <div class="hero-badges">
+          <span class="hero-badge">30+ years in the trade</span>
+          <span class="hero-badge">Licensed & Fully Insured</span>
+          <span class="hero-badge">Voted for finishes that last</span>
+        </div>
+        <h1 class="hero-title">The Painters Your Neighbours Secretly Recommend</h1>
+        <div class="hero-bottom">
+          <div class="hero-actions">
+            <a class="hero-btn hero-btn-orange" href="#contact">Get a Free Quote <span class="arrow">→</span></a>
+            <a class="hero-btn hero-btn-phone" href="tel:+61477667826">0477 667 826</a>
+          </div>
+          <p class="hero-blurb">Interior and exterior house painting, cabinet respraying and specialty finishes across Melbourne — prep-first, fixed quotes, proper clean-up.</p>
+        </div>
+      </div>
+      <div class="hero-media" id="heroMedia">
+        <div class="hero-viewport">
+          <div class="hero-parallax" id="heroParallax">
+            <img src="assets/images/exterior.jpg" alt="Freshly painted weatherboard home" draggable="false" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Our services</span>
+          <h2 class="section-title">We prep so the finish lasts</h2>
+        </div>
+        <div class="services-grid" id="servicesGrid"></div>
+        <div class="section-cta">
+          <a class="btn btn-dark" href="#contact">View All Services <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="projects">
+      <div class="portfolio-head">
+        <div class="reveal">
+          <span class="section-label">Our portfolio</span>
+          <h2 class="portfolio-title">A look at what we’ve finished</h2>
+          <div class="portfolio-actions">
+            <a class="portfolio-btn" href="#gallery">View Projects <span class="arrow">→</span></a>
+            <a class="portfolio-btn" href="#gallery">View Gallery <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-scene" id="gallery">
+        <div class="portfolio-perspective">
+          <div class="portfolio-cylinder" id="portfolioCylinder"></div>
+        </div>
+        <div class="portfolio-drag" aria-hidden="true">&lt;&lt;&lt; DRAG &gt;&gt;&gt;</div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section why" id="why">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Why choose ColourX</span>
+          <h2 class="section-title">Because your walls deserve better than ‘good enough’</h2>
+        </div>
+        <div class="why-grid" id="whyGrid"></div>
+      </div>
+    </section>
+
+    <!-- STATS + ABOUT -->
+    <section class="stats-scroll" id="stats">
+      <div class="stats-sticky">
+        <div class="stats-panel" data-side="left" id="statsLeft">
+          <div class="stats-panel-media" aria-hidden="true"><img src="assets/images/stock-paint-1.jpg" alt="" /></div>
+          <div class="stats-panel-stack" id="statsLeftStack"></div>
+        </div>
+        <div class="stats-panel" data-side="right" id="statsRight">
+          <div class="stats-panel-media" aria-hidden="true"><img src="assets/images/stock-paint-1.jpg" alt="" /></div>
+          <div class="stats-panel-stack" id="statsRightStack"></div>
+        </div>
+        <div class="stats-seam" id="statsSeam" aria-hidden="true"></div>
+      </div>
+      <div class="stats-video" id="stats-video">
+        <div class="stats-video-frame">
+          <video id="statsVideoEl" src="assets/videos/painting.mp4" autoplay muted loop playsinline poster="assets/images/stock-paint-2.jpg"></video>
+          <button type="button" class="stats-play" id="statsPlay" aria-label="Pause video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="about-block" id="about">
+        <div class="container about-grid">
+          <div class="reveal">
+            <span class="section-label">About us</span>
+            <h2 class="section-title">Painters Who Care About The Finished Product</h2>
+            <p class="about-body">ColourX Coating System is the house painting arm of our surface trades family — sister business to our epoxy floor and specialty coating finishing. Same people, same standard, different surfaces. We show up, do a proper job, and deliver workmanship with honesty and integrity.</p>
+            <ul class="about-points">
+              <li>Every job is personally worked or overseen — quality never slips.</li>
+              <li>We live here too, so we treat your home like our own.</li>
+              <li>From first call to final walkthrough, you speak with real people who know paint.</li>
+              <li>Fill, sand, seal — the slow parts nobody photographs are the whole job.</li>
+            </ul>
+            <div class="about-cta">
+              <a class="btn btn-dark" href="#contact">Know More About Us <span class="arrow">→</span></a>
+            </div>
+          </div>
+          <div class="about-media reveal">
+            <div class="tall"><img src="assets/images/exterior.jpg" alt="ColourX painted home exterior" /></div>
+            <img src="assets/images/interior.jpg" alt="Interior painting detail" />
+            <img src="assets/images/cabinets.jpg" alt="Cabinet respray finish" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">How we work</span>
+          <h2 class="section-title">Here’s how we make painting easy</h2>
+        </div>
+        <div class="process-grid" id="processGrid"></div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="reviews-inner">
+        <div class="section-head reveal">
+          <span class="section-label">Reviews</span>
+          <h2 class="section-title">Don’t take our word for it — take theirs</h2>
+        </div>
+        <div class="review-ratings" id="reviewRatings"></div>
+        <div class="review-carousel">
+          <div class="review-viewport" id="reviewViewport">
+            <div class="review-track" id="reviewTrack"></div>
+          </div>
+          <div class="review-nav">
+            <button type="button" id="reviewPrev" aria-label="Previous">←</button>
+            <button type="button" id="reviewNext" aria-label="Next">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINISHES -->
+    <section class="section" id="finishes">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Finish types</span>
+          <h2 class="section-title">Interior? Exterior? Specialty? Let’s find your match</h2>
+        </div>
+        <div class="finishes-grid" id="finishesGrid"></div>
+        <div class="section-cta">
+          <a class="btn btn-dark" href="#contact">View All Types <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faqs">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Faqs</span>
+          <h2 class="section-title">Let’s walk through your questions, one by one.</h2>
+        </div>
+        <div class="faq-list" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="section-label">Contact</span>
+          <h2 class="section-title">You call. We coat. Deal?</h2>
+          <p class="contact-lead">Tell us what you need — we’ll handle the rest. Written fixed quotes, usually within one business day.</p>
+          <div class="contact-meta">
+            <a href="tel:+61477667826">0477 667 826</a>
+            <a href="mailto:contact.colourx@gmail.com">contact.colourx@gmail.com</a>
+            <p>Mon – Fri, 7am – 5pm · Sat, 8am – 1pm</p>
+            <p>Servicing Melbourne metro and surrounds</p>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="field"><label for="name">Name*</label><input id="name" name="name" required placeholder="Jane Smith" /></div>
+          <div class="field"><label for="email">Email*</label><input id="email" name="email" type="email" required placeholder="you@email.com" /></div>
+          <div class="field"><label for="phone">Phone*</label><input id="phone" name="phone" required placeholder="0477 000 000" /></div>
+          <div class="field"><label for="suburb">Suburb*</label><input id="suburb" name="suburb" required placeholder="Where's the job?" /></div>
+          <div class="field">
+            <label for="property">Property Type*</label>
+            <select id="property" name="property" required>
+              <option value="Residential">Residential</option>
+              <option value="Commercial">Commercial</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="service">Service Type*</label>
+            <select id="service" name="service" required>
+              <option>Interior painting</option>
+              <option>Exterior painting</option>
+              <option>Cabinet respraying</option>
+              <option>Specialty finishes</option>
+              <option>Deck & timber staining</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Rooms, storeys, colours you have in mind, timing…"></textarea>
+          </div>
+          <button class="btn btn-orange" type="submit" id="contactSubmit">Request Free Estimate <span class="arrow">→</span></button>
+          <p class="form-note">No obligation. We reply within one business day. Or call 0477 667 826.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-contact">
+      <div class="footer-contact-row"><span class="footer-contact-label">Phone</span><a href="tel:+61477667826">0477 667 826</a></div>
+      <div class="footer-contact-row"><span class="footer-contact-label">Email</span><a href="mailto:contact.colourx@gmail.com">contact.colourx@gmail.com</a></div>
+      <div class="footer-contact-row"><span class="footer-contact-label">Service area</span><span>Servicing Melbourne metro and surrounds</span></div>
+      <div class="footer-contact-row"><span class="footer-contact-label">Opening hours</span><span>Mon – Fri, 7am – 5pm · Sat, 8am – 1pm</span></div>
+    </div>
+    <div class="footer-brand-block">
+      <div class="footer-art" aria-hidden="true">
+        <img src="assets/images/exterior.jpg" alt="" />
+        <svg class="footer-art-icon" viewBox="0 0 120 120" fill="none">
+          <path d="M18 72 L60 28 L102 72 V104 H18 V72Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M48 104 V76 H72 V104" stroke="currentColor" stroke-width="4"/>
+          <path d="M86 40 C96 34 108 42 104 54 C112 56 112 70 100 70 H78 C72 70 70 62 76 56 C74 48 80 42 86 40Z" fill="currentColor" opacity="0.9"/>
+          <path d="M92 70 V92" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="footer-brand-row">
+        <div class="footer-wordmark" aria-label="ColourX" id="footerWordmark"></div>
+        <p>Painted homes that last. Service built on trust. Proudly serving Melbourne with real people, proper prep, and finishes we’re proud to put a name on.</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#finishes">Finishes</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Interior Painting</a></li>
+          <li><a href="#services">Exterior Painting</a></li>
+          <li><a href="#services">Cabinet Respraying</a></li>
+          <li><a href="#services">Specialty Finishes</a></li>
+          <li><a href="#services">Decks & Timber</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> ColourX Coating System. Licensed and fully insured.</span>
+      <span>Melbourne house painters</span>
+    </div>
+  </footer>
+
+  <script>
+(function () {
+  'use strict';
+
+  const services = [
+    { title: 'Interior Painting', desc: 'Refresh your home with a flawless finish that transforms every room.', image: 'assets/images/interior.jpg' },
+    { title: 'Exterior Painting', desc: 'Weatherboard, render, brick and roof — coated to stand up to sun and rain.', image: 'assets/images/exterior.jpg' },
+    { title: 'Cabinet Respraying', desc: 'Preserve the character, upgrade the style — factory-smooth joinery finishes.', image: 'assets/images/cabinets.jpg' },
+    { title: 'Specialty Finishes', desc: 'Wallpaper, Dulux concrete Venetian plaster, Tuscan effects and more.', image: 'assets/images/wallpaper.jpg' },
+    { title: 'Decks & Timber', desc: 'Sand, treat and stain outdoor timber so the grain stays protected year-round.', image: 'assets/images/stock-paint-2.jpg' },
+    { title: 'Commercial Painting', desc: 'Light commercial spaces finished to the same craftsman standard as our homes.', image: 'assets/images/stock-paint-3.jpg' },
+  ];
+
+  const portfolio = [
+    { src: 'assets/images/exterior.jpg', alt: 'Exterior weatherboard painting' },
+    { src: 'assets/images/gallery-02.jpg', alt: 'Completed home exterior' },
+    { src: 'assets/images/interior.jpg', alt: 'Interior painting finish' },
+    { src: 'assets/images/gallery-05.jpg', alt: 'Cabinetry respray' },
+    { src: 'assets/images/wallpaper.jpg', alt: 'Specialty wallpaper finish' },
+    { src: 'assets/images/gallery-06.jpg', alt: 'Kitchen joinery finish' },
+    { src: 'assets/images/gallery-04.jpg', alt: 'Render repair and coating' },
+    { src: 'assets/images/cabinets.jpg', alt: 'Cabinet respraying' },
+    { src: 'assets/images/gallery-03.jpg', alt: 'Painted facade detail' },
+    { src: 'assets/images/gallery-10.jpg', alt: 'Cabinet resurfacing' },
+    { src: 'assets/images/gallery-01.jpg', alt: 'Interior & exterior project' },
+    { src: 'assets/images/stock-paint-3.jpg', alt: 'Modern painted home' },
+  ];
+
+  const whyUs = [
+    { title: 'No worries, no what-ifs.', desc: 'Fully licensed with $10m public liability — your home and peace of mind stay protected.', icon: 'shield' },
+    { title: 'Certified, verified & trusted.', desc: 'Qualified painter and former NZ Master Painter Association member — real trade credentials.', icon: 'badge' },
+    { title: 'Only the good stuff on the walls.', desc: 'Premium paints as standard, proper primers, and prep nobody photographs — but everyone notices.', icon: 'paint' },
+    { title: 'Fair prices, no funny business.', desc: 'Written fixed quotes with prep listed in full. No surprise extras after the job starts.', icon: 'tag' },
+  ];
+
+  const stats = [
+    { value: 900, suffix: '+', label: 'homes painted', desc: 'From cosy interiors to full exterior makeovers across Melbourne.' },
+    { value: 30, suffix: '+', label: 'years in the trade', desc: 'Decades of hard work, dedication, and finishes we’re proud to put a name on.' },
+    { value: 5, suffix: '-yr', label: 'workmanship warranty', desc: 'We stand behind every coat — that’s why the warranty is written down.' },
+    { value: 5, suffix: '.0', label: 'average rating', desc: 'From Google reviews — customers love the finish and the process.' },
+  ];
+
+  const process = [
+    { step: '01', title: 'Quote', desc: 'You send details or we walk the job. You get a written fixed price with the prep listed.' },
+    { step: '02', title: 'Colours', desc: 'We help you narrow colours and sheens, and put up sample patches where it matters.' },
+    { step: '03', title: 'Protect & prep', desc: 'Floors covered, repairs done, surfaces sanded and primed — the slow, careful part.' },
+    { step: '04', title: 'Finish & check', desc: 'Final coats applied, clean-up done daily, and a walkthrough with you at the end.' },
+  ];
+
+  const reviews = {
+    ratings: [
+      { score: '5.0', label: '7+ Google Reviews' },
+      { score: '5 yr', label: 'Workmanship Warranty' },
+      { score: '$10m', label: 'Public Liability' },
+    ],
+    items: [
+      { quote: 'Fantastic service and with a friendly and professional manner. Many thanks for your assistance. Highly recommended.', name: 'Petros Eliadis', meta: 'Google review · Melbourne', avatar: 'assets/images/gallery-01.jpg', image: 'assets/images/interior.jpg' },
+      { quote: 'Preparation was meticulous and the finish is flawless. Floors protected, edges crisp, and the crew left the place cleaner than they found it.', name: 'Homeowner', meta: 'Interior painting · Melbourne', avatar: 'assets/images/gallery-03.jpg', image: 'assets/images/stock-interior-2.jpg' },
+      { quote: 'Our kitchen cabinets look brand new without the cost of a full renovation. Smooth factory finish and hardware adjusted perfectly.', name: 'Kitchen client', meta: 'Cabinet respraying · Melbourne', avatar: 'assets/images/gallery-05.jpg', image: 'assets/images/cabinets.jpg' },
+      { quote: 'Weatherboards sanded back properly, primed right, and the exterior colour looks sharp in every light. Fixed quote, no surprises.', name: 'Exterior client', meta: 'Exterior painting · Melbourne', avatar: 'assets/images/gallery-07.jpg', image: 'assets/images/exterior.jpg' },
+    ],
+  };
+
+  const finishes = [
+    { title: 'Interior systems', desc: 'Low-VOC wall, ceiling and trim systems for a crisp, washable finish indoors.', lifespan: '7–12 years', price: 'Fixed quote per room / home', image: 'assets/images/interior.jpg' },
+    { title: 'Exterior coatings', desc: 'UV-stable weatherboard, render and brick systems built for Melbourne weather.', lifespan: '8–15 years', price: 'Fixed quote by elevation', image: 'assets/images/exterior.jpg' },
+    { title: 'Specialty finishes', desc: 'Venetian plaster, wallpaper and textured coatings that bring depth and character.', lifespan: '10–20+ years', price: 'Quoted by feature area', image: 'assets/images/wallpaper.jpg' },
+  ];
+
+  const faqs = [
+    { q: 'How do I know if my home needs repainting?', a: 'If coatings are chalking, cracking, peeling, or colours look tired in daylight — it’s time. We can confirm with a free on-site look and a written quote.' },
+    { q: 'Do you offer free estimates?', a: 'Yes. No obligation, no sales pressure — a written fixed price with preparation listed in full, usually within one business day.' },
+    { q: 'How long does a typical job take?', a: 'Most interiors run a few days depending on rooms and repairs. Full exteriors vary by storeys and condition. We schedule around weather and keep you updated.' },
+    { q: 'What paints and finishes do you use?', a: 'Premium paints as standard — interiors, exteriors, two-pack joinery systems, Venetian plaster, wallpaper and timber stains. We’ll recommend the right system for each surface.' },
+    { q: 'Are you licensed and insured?', a: 'Yes — fully licensed painting contractor with $10m public liability cover, and a 5-year workmanship warranty on the finish.' },
+    { q: 'Do you help with colour selection?', a: 'Absolutely. We help narrow colours and sheens and put up sample patches where it matters before the full coats go on.' },
+    { q: 'Can you respray cabinets instead of replacing them?', a: 'That’s one of our specialties. Doors are removed, degreased, keyed and sprayed for a hard, factory-smooth finish — then refitted and adjusted.' },
+    { q: 'Do you take on commercial work?', a: 'Light commercial, yes — offices, retail fit-outs and similar spaces finished to the same standard as our residential work.' },
+  ];
+
+  const icons = {
+    shield: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6l8-3z"/></svg>',
+    badge: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 21l5-2 5 2-1.5-7.5"/></svg>',
+    paint: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20h6l10-10a3 3 0 0 0-4.2-4.2L6 15.6V20z"/><path d="M14 6l4 4"/></svg>',
+    tag: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12l-8 8-9-9V3h8l9 9z"/><circle cx="7.5" cy="7.5" r="1.2" fill="currentColor"/></svg>',
+  };
+
+  function clamp(n, min, max) { return Math.min(max, Math.max(min, n)); }
+  function $(sel, root) { return (root || document).querySelector(sel); }
+  function $$(sel, root) { return [...(root || document).querySelectorAll(sel)]; }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Render lists
+  $('#servicesGrid').innerHTML = services.map(s => `
+    <a class="service-card reveal" href="#contact">
+      <div class="service-copy"><h3>${s.title}</h3><p>${s.desc}</p></div>
+      <div class="service-media"><img src="${s.image}" alt="${s.title}" /></div>
+    </a>`).join('');
+
+  $('#whyGrid').innerHTML = whyUs.map(w => `
+    <article class="why-card reveal">
+      <div class="why-icon">${icons[w.icon]}</div>
+      <h3>${w.title}</h3>
+      <p>${w.desc}</p>
+    </article>`).join('');
+
+  function statCard(s, align) {
+    return `<article class="stats-card stats-card-${align}">
+      <div class="stats-number-row" aria-label="${s.value}${s.suffix}">
+        <span class="stats-number" data-value="${s.value}">0</span>
+        <span class="stats-suffix">${s.suffix}</span>
+      </div>
+      <h3>${s.label}</h3>
+      <p>${s.desc}</p>
+    </article>`;
+  }
+  $('#statsLeftStack').innerHTML = statCard(stats[0], 'right') + statCard(stats[2], 'right');
+  $('#statsRightStack').innerHTML = statCard(stats[1], 'left') + statCard(stats[3], 'left');
+
+  $('#processGrid').innerHTML = process.map(p => `
+    <article class="process-card reveal">
+      <span class="process-step">Step ${p.step}</span>
+      <h3>${p.title}</h3>
+      <p>${p.desc}</p>
+    </article>`).join('');
+
+  $('#reviewRatings').innerHTML = reviews.ratings.map(r => `
+    <a class="rating-card" href="https://search.google.com/local/writereview?placeid=ChIJAzOHVZShmigRj66W2WKwR30" target="_blank" rel="noreferrer">
+      <strong>${r.score}</strong><span>${r.label}</span>
+    </a>`).join('');
+
+  $('#reviewTrack').innerHTML = reviews.items.map((item, i) => `
+    <article class="review-card" data-index="${i}">
+      <div class="review-card-media">
+        <blockquote class="review-quote">“${item.quote}”</blockquote>
+        <img class="review-card-photo" src="${item.image}" alt="" hidden />
+      </div>
+      <footer class="review-card-foot">
+        <div class="review-card-person"><strong>${item.name}</strong><span>${item.meta}</span></div>
+        <div class="review-card-meta">
+          <img class="review-avatar" src="${item.avatar}" alt="" />
+          <button type="button" class="review-eye" aria-label="Show project photo" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.5"/></svg>
+          </button>
+        </div>
+      </footer>
+    </article>`).join('');
+
+  $('#finishesGrid').innerHTML = finishes.map(f => `
+    <article class="finish-card reveal">
+      <div class="finish-media"><img src="${f.image}" alt="${f.title}" /></div>
+      <div class="finish-body">
+        <h3>${f.title}</h3>
+        <p>${f.desc}</p>
+        <div class="finish-meta">
+          <div><span>Lifespan</span><span>${f.lifespan}</span></div>
+          <div><span>Price</span><span>${f.price}</span></div>
+        </div>
+      </div>
+    </article>`).join('');
+
+  $('#faqList').innerHTML = faqs.map((item, i) => `
+    <div class="faq-item${i === 0 ? ' open' : ''}" data-index="${i}">
+      <button class="faq-q" type="button" aria-expanded="${i === 0}">${item.q}<span class="icon">+</span></button>
+      <div class="faq-a"><p>${item.a}</p></div>
+    </div>`).join('');
+
+  // Footer wordmark
+  $('#footerWordmark').innerHTML = 'ColourX'.split('').map((c, i) =>
+    `<span style="--i:${i}">${c}</span>`).join('');
+
+  // Portfolio concave cylinder (Rooferio-style — center small, sides large)
+  const CARD_COUNT = portfolio.length;
+  const ANGLE_STEP = 360 / CARD_COUNT;
+  const DESKTOP_RADIUS = 520;
+  const DRAG_SENSITIVITY = 0.32;
+  const cylinder = $('#portfolioCylinder');
+  const scene = $('#gallery');
+
+  function getRadius(width) {
+    if (width <= 760) return Math.round(Math.min(300, Math.max(210, width * 0.68)));
+    return DESKTOP_RADIUS;
+  }
+
+  let radius = getRadius(window.innerWidth);
+  cylinder.innerHTML = portfolio.map((item, index) => `
+    <div class="portfolio-card" data-index="${index}">
+      <img src="${item.src}" alt="${item.alt}" draggable="false" />
+    </div>`).join('');
+
+  let rotation = 0;
+  let velocity = 0;
+  let dragging = false;
+  let lastX = 0;
+
+  function layoutCards() {
+    $$('.portfolio-card', cylinder).forEach((card, index) => {
+      card.style.transform = `rotateY(${index * ANGLE_STEP}deg) translateZ(-${radius}px)`;
+    });
+  }
+
+  function updateCylinder() {
+    cylinder.style.transform = `rotateY(${rotation}deg)`;
+    $$('.portfolio-card', cylinder).forEach((card, index) => {
+      const angle = (((index * ANGLE_STEP + rotation) % 360) + 360) % 360;
+      const normalized = angle > 180 ? 360 - angle : angle;
+      let opacity = 1;
+      if (normalized > 130) opacity = 0;
+      else if (normalized > 110) opacity = 0.35;
+      card.style.opacity = opacity;
+    });
+  }
+
+  layoutCards();
+
+  window.addEventListener('resize', () => {
+    radius = getRadius(window.innerWidth);
+    layoutCards();
+    updateCylinder();
+  });
+
+  let last = performance.now();
+  function tick(now) {
+    const dt = now - last;
+    last = now;
+    if (!dragging) {
+      if (Math.abs(velocity) >= 0.03) {
+        velocity *= 0.94;
+        rotation += velocity;
+        if (Math.abs(velocity) < 0.03) velocity = 0;
+      } else {
+        rotation += dt * 0.004;
+      }
+      updateCylinder();
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+  updateCylinder();
+
+  scene.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    lastX = e.clientX;
+    velocity = 0;
+    scene.setPointerCapture(e.pointerId);
+  });
+  scene.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    const dx = e.clientX - lastX;
+    lastX = e.clientX;
+    const sens = window.innerWidth <= 760 ? 0.42 : DRAG_SENSITIVITY;
+    velocity = -dx * sens;
+    rotation += velocity;
+    updateCylinder();
+  });
+  scene.addEventListener('pointerup', () => { dragging = false; });
+  scene.addEventListener('pointercancel', () => { dragging = false; });
+  scene.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY) || e.shiftKey) {
+      e.preventDefault();
+      rotation += (e.deltaX || e.deltaY) * 0.12;
+      velocity = 0;
+      updateCylinder();
+    }
+  }, { passive: false });
+
+  // Nav
+  const toggle = $('#navToggle');
+  const drawer = $('#mobileDrawer');
+  toggle.addEventListener('click', () => {
+    const open = !drawer.classList.contains('open');
+    drawer.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  $$('a', drawer).forEach(a => a.addEventListener('click', () => {
+    drawer.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }));
+
+  // Smooth anchors
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    const y = el.getBoundingClientRect().top + window.scrollY - 72;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  });
+
+  // Hero parallax
+  const heroMedia = $('#heroMedia');
+  const heroParallax = $('#heroParallax');
+  function heroScroll() {
+    if (!heroMedia) return;
+    const rect = heroMedia.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const start = vh;
+    const end = -rect.height;
+    const t = clamp((start - rect.top) / (start - end), 0, 1);
+    const mobile = window.matchMedia('(max-width: 760px)').matches;
+    const scale = mobile ? 1.12 - t * 0.12 : 1.3 - t * 0.3;
+    const y = mobile ? t * 40 : 100 + t * 160;
+    heroParallax.style.transform = `translate3d(0, ${y}px, 0) scale(${scale})`;
+  }
+
+  // Stats panels
+  const statsSection = $('#stats');
+  const statsLeft = $('#statsLeft');
+  const statsRight = $('#statsRight');
+  const statsSeam = $('#statsSeam');
+  let statsArmed = false;
+  function statsScroll() {
+    const rect = statsSection.getBoundingClientRect();
+    if (rect.bottom < -240 || rect.top > window.innerHeight + 240) return;
+    const total = Math.max(1, statsSection.offsetHeight - window.innerHeight);
+    const p = clamp(-rect.top / total, 0, 1);
+    const open = clamp((p - 0.02) / 0.72, 0, 1);
+    const travel = window.innerWidth * 0.78;
+    if (window.matchMedia('(max-width: 760px)').matches) {
+      statsLeft.style.transform = 'none';
+      statsRight.style.transform = 'none';
+    } else {
+      statsLeft.style.transform = `translate3d(${-open * travel}px, 0, 0)`;
+      statsRight.style.transform = `translate3d(${open * travel}px, 0, 0)`;
+      if (statsSeam) statsSeam.style.opacity = String(clamp(1 - open * 8, 0, 1));
+    }
+    if (!statsArmed && rect.top < window.innerHeight * 0.55 && rect.bottom > 120) {
+      statsArmed = true;
+      $$('.stats-number').forEach(el => animateNumber(el, Number(el.dataset.value || 0)));
+    }
+  }
+  function animateNumber(el, target) {
+    const start = performance.now();
+    const dur = 1200;
+    function frame(now) {
+      const t = clamp((now - start) / dur, 0, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(target * eased).toLocaleString('en-US');
+      if (t < 1) requestAnimationFrame(frame);
+      else el.textContent = target.toLocaleString('en-US');
+    }
+    requestAnimationFrame(frame);
+  }
+
+  // Stats video play
+  const video = $('#statsVideoEl');
+  const playBtn = $('#statsPlay');
+  playBtn.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      playBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>';
+      playBtn.setAttribute('aria-label', 'Pause video');
+    } else {
+      video.pause();
+      playBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5L8 5.5z"/></svg>';
+      playBtn.setAttribute('aria-label', 'Play video');
+    }
+  });
+
+  // Reviews carousel
+  let reviewIndex = 0;
+  let reviewStep = 0;
+  let perView = 2;
+  function measureReviews() {
+    const card = $('#reviewTrack .review-card');
+    const track = $('#reviewTrack');
+    if (!card || !track) return;
+    const gap = parseFloat(getComputedStyle(track).gap || '0') || 0;
+    perView = window.matchMedia('(max-width: 760px)').matches ? 1 : 2;
+    reviewStep = card.offsetWidth + gap;
+    reviewIndex = Math.min(reviewIndex, Math.max(0, reviews.items.length - perView));
+    track.style.transform = `translate3d(${-reviewIndex * reviewStep}px, 0, 0)`;
+    track.style.transition = 'transform 0.55s cubic-bezier(0.22, 1, 0.36, 1)';
+    $('#reviewPrev').disabled = reviewIndex === 0;
+    $('#reviewNext').disabled = reviewIndex >= reviews.items.length - perView;
+  }
+  $('#reviewPrev').addEventListener('click', () => {
+    reviewIndex = Math.max(0, reviewIndex - 1);
+    measureReviews();
+  });
+  $('#reviewNext').addEventListener('click', () => {
+    reviewIndex = Math.min(reviews.items.length - perView, reviewIndex + 1);
+    measureReviews();
+  });
+  $$('.review-eye').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.review-card');
+      const quote = card.querySelector('.review-quote');
+      const photo = card.querySelector('.review-card-photo');
+      const show = photo.hasAttribute('hidden');
+      if (show) {
+        quote.hidden = true;
+        photo.removeAttribute('hidden');
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-pressed', 'true');
+        btn.setAttribute('aria-label', 'Show review text');
+      } else {
+        photo.setAttribute('hidden', '');
+        quote.hidden = false;
+        btn.classList.remove('is-active');
+        btn.setAttribute('aria-pressed', 'false');
+        btn.setAttribute('aria-label', 'Show project photo');
+      }
+    });
+  });
+
+  // FAQ
+  $$('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const wasOpen = item.classList.contains('open');
+      $$('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!wasOpen) {
+        item.classList.add('open');
+        item.querySelector('.faq-q').setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Finish tilt
+  $$('.finish-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width;
+      const py = (e.clientY - rect.top) / rect.height;
+      const rx = (0.5 - py) * 14;
+      const ry = (px - 0.5) * 16;
+      card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(900px) rotateX(0) rotateY(0)';
+    });
+  });
+
+  // Contact form
+  $('#contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    $('#contactSubmit').innerHTML = 'Request received <span class="arrow">→</span>';
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.classList.add('is-in');
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  $$('.reveal').forEach(el => io.observe(el));
+
+  function onScroll() {
+    heroScroll();
+    statsScroll();
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', () => {
+    measureReviews();
+    onScroll();
+  });
+  measureReviews();
+  onScroll();
+})();
+  </script>
+</body>
+</html>
