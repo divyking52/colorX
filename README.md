@@ -10,4 +10,5 @@ npx --yes serve .
 
 ## Deploy
 
-Pushed to [divyking52/colorX](https://github.com/divyking52/colorX) and hosted on Vercel.
+- GitHub: https://github.com/divyking52/colorX
+- Live: https://colorx-lake.vercel.app
